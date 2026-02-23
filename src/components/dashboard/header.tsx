@@ -5,12 +5,19 @@ import { Button } from "@/components/ui/button";
 import { UserNav } from "./user-nav";
 import { Plus, Search } from "lucide-react";
 
+// Define a type for the user prop
+type UserData = {
+  name: string;
+  email: string;
+};
+
 interface HeaderProps {
+  user: UserData;
   onNewNote: () => void;
   onSearch: () => void;
 }
 
-export function Header({ onNewNote, onSearch }: HeaderProps) {
+export function Header({ user, onNewNote, onSearch }: HeaderProps) {
   return (
     <header className="flex h-14 items-center gap-4 border-b bg-card px-4 lg:h-16 lg:px-6">
       <Logo />
@@ -23,7 +30,7 @@ export function Header({ onNewNote, onSearch }: HeaderProps) {
           <Plus className="mr-2 h-4 w-4" />
           New Note
         </Button>
-        <UserNav />
+        <UserNav user={user} />
       </div>
     </header>
   );

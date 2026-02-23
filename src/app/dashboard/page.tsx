@@ -10,11 +10,23 @@ import { NoteEditor } from "@/components/dashboard/note-editor";
 import { CommandMenu } from "@/components/dashboard/command-menu";
 import { Header } from "@/components/dashboard/header";
 
+// Mock user data type
+type UserData = {
+  name: string;
+  email: string;
+};
+
 export default function DashboardPage() {
   const router = useRouter();
   const [notes, setNotes] = React.useState<Note[]>(mockNotes);
   const [selectedNoteId, setSelectedNoteId] = React.useState<string | null>(mockNotes[0]?.id || null);
   const [commandMenuOpen, setCommandMenuOpen] = React.useState(false);
+  
+  // Mock user. In a real app, this would come from an auth context.
+  const [user, setUser] = React.useState<UserData>({
+    name: "Reena",
+    email: "reena@example.com",
+  });
 
   const selectedNote = notes.find((note) => note.id === selectedNoteId) || null;
 
@@ -66,7 +78,7 @@ export default function DashboardPage() {
 
   return (
     <div className="flex h-svh flex-col">
-      <Header onNewNote={handleNewNote} onSearch={() => setCommandMenuOpen(true)} />
+      <Header user={user} onNewNote={handleNewNote} onSearch={() => setCommandMenuOpen(true)} />
       <main className="flex-1 overflow-hidden">
         <ResizablePanelGroup direction="horizontal" className="h-full w-full">
           <ResizablePanel defaultSize={30} minSize={20} maxSize={40}>
