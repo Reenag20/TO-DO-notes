@@ -15,7 +15,7 @@ const fontHeadline = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Zenith Notes',
+  title: 'Reena Notes',
   description: 'A minimalist, high-contrast notes platform for creators, researchers, and knowledge workers.',
 };
 
