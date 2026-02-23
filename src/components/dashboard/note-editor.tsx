@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -176,7 +177,11 @@ export function NoteEditor({ note, onUpdate }: NoteEditorProps) {
               {tagsValue.map((tag) => (
                 <Badge key={tag} variant="secondary" className="group">
                   {tag}
-                  <button onClick={() => removeTag(tag)} className="ml-1 group-hover:text-destructive">
+                  <button
+                    type="button"
+                    onClick={() => removeTag(tag)}
+                    className="ml-1 rounded-full p-0.5 group-hover:bg-destructive/20 group-hover:text-destructive"
+                  >
                     <X className="h-3 w-3" />
                   </button>
                 </Badge>
