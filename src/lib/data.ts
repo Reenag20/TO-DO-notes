@@ -3,9 +3,9 @@ import type { Note } from "./types";
 export const mockNotes: Note[] = [
   {
     id: "note-1",
-    title: "Initial Thoughts on Project Reena",
-    content: "Initial Thoughts on Project Reena\n\nThis is a rapid capture platform. The main goal is speed and efficiency. We need to focus on keyboard shortcuts and a minimalist UI. The design should be stark, high-contrast, what we call 'brutal'.",
-    tags: ["project-reena", "ux", "design-language"],
+    title: "Initial Thoughts on Project To Do",
+    content: "Initial Thoughts on Project To Do\n\nThis is a rapid capture platform. The main goal is speed and efficiency. We need to focus on keyboard shortcuts and a minimalist UI. The design should be stark, high-contrast, what we call 'brutal'.",
+    tags: ["project-todo", "ux", "design-language"],
     createdAt: "2024-05-20T10:00:00Z",
     updatedAt: "2024-05-20T10:05:00Z",
   },
@@ -20,7 +20,7 @@ export const mockNotes: Note[] = [
   {
     id: "note-3",
     title: "Marketing Copy Ideas",
-    content: "Marketing Copy Ideas\n\n- Reena Notes: Capture at the speed of thought.\n- The antidote to bloated note apps.\n- Your ideas, unfiltered.\n- Brutal design, beautiful focus.",
+    content: "Marketing Copy Ideas\n\n- To Do Notes: Capture at the speed of thought.\n- The antidote to bloated note apps.\n- Your ideas, unfiltered.\n- Brutal design, beautiful focus.",
     tags: ["marketing", "copywriting"],
     createdAt: "2024-05-22T09:00:00Z",
     updatedAt: "2024-05-23T11:20:00Z",

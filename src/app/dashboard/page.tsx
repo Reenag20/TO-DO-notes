@@ -24,8 +24,8 @@ export default function DashboardPage() {
   
   // Mock user. In a real app, this would come from an auth context.
   const [user, setUser] = React.useState<UserData>({
-    name: "Reena",
-    email: "reena@example.com",
+    name: "User",
+    email: "user@example.com",
   });
 
   const selectedNote = notes.find((note) => note.id === selectedNoteId) || null;

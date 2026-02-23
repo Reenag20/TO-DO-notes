@@ -15,7 +15,7 @@ const fontHeadline = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Reena Notes',
+  title: 'To Do Notes',
   description: 'A minimalist, high-contrast notes platform for creators, researchers, and knowledge workers.',
 };
 
